@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
+  background: rgb(255,249,182);
+  background: linear-gradient(0deg, rgba(255,249,182,1) 0%, rgba(224,153,37,1) 100%);
 
   img {
     width: 100%;

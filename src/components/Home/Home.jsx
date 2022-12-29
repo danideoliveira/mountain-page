@@ -7,7 +7,7 @@ export default function Home() {
       <div className="title-div">
         <Title>Mountains</Title>
       </div>
-      <img src={images.background} alt="vector" />
+      {/* <img src={images.background} alt="vector" /> */}
       <img src={images.sun} alt="vector" />
       <img src={images.mtnBack2} alt="vector" />
       <img src={images.mtnBack} alt="vector" />
