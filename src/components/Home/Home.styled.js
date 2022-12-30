@@ -10,6 +10,7 @@ export const Container = styled.div`
     /* height: 100%; */
     position: absolute;
     bottom: 0;
+    transition: 0.3s all ease;
   }
 
   .title-div {
@@ -22,15 +23,15 @@ export const Container = styled.div`
   }
 
   .vector-mb {
-    display: none;
+    visibility: hidden;
   }
 
   @media (min-width: 300px) and (max-width: 999px) and (orientation: portrait) {
     .vector-desktop {
-      display: none;
+      visibility: hidden;
     }
     .vector-mb {
-      display: initial;
+      visibility: visible;
     }
   }
 `;
