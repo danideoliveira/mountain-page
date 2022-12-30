@@ -15,7 +15,9 @@ export default function Home() {
     <Container>
       <div className="title-div">
         <Title className="home-title">Mountains</Title>
-        <Button>Discover</Button>
+        <Button whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
+          Discover
+        </Button>
       </div>
 
       <div className="container-desktop">

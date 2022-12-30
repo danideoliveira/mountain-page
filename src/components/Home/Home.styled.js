@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
+import { motion } from "framer-motion";
 import { colors } from "../../helpers/Colors";
 
 export const Container = styled.div`
@@ -32,7 +33,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     position: absolute;
-    padding-bottom: 17rem;
+    padding-bottom: 20rem;
     flex-direction: column;
   }
 
@@ -51,7 +52,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-size: 6.4rem;
+  font-size: 9.6rem;
   color: ${colors.color1};
   z-index: 994;
   font-weight: 400;
@@ -59,7 +60,7 @@ export const Title = styled.h1`
   transition: 0.5s ease-in;
 `;
 
-export const Button = styled.button`
+export const Button = styled(motion.button)`
   width: 15%;
   height: 6rem;
   color: ${colors.color1};
@@ -70,7 +71,6 @@ export const Button = styled.button`
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
-  transition: 0.3s ease;
 
   &:hover {
     background-color: ${colors.color1};
