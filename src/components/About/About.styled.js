@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import { setFlexbox } from "../../helpers/Mixins";
+import { colors } from "../../helpers/Colors";
 
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: #090210;
+  background-color: ${colors.color2};
   position: relative;
 
   .vector {

@@ -1,42 +1,48 @@
 import { images } from "../Images/Images";
-import { Container, Title } from "./Home.styled";
+import { Container, Title, Button } from "./Home.styled";
+import { useEffect, useState } from "react";
 
-export default function Home() { 
-  window.addEventListener("scroll", function () {
-    const sun = document.querySelector(".container-desktop > .sun");
-    const mtnBack2 = document.querySelector(".container-desktop > .mtn-back-2");
-    const mtnBack = document.querySelector(".container-desktop > .mtn-back");
-    const mtnFront = document.querySelector(".container-desktop > .mtn-front");
-
+export default function Home() {
+  function setParallax() {
     const vectorsDesktop = document.querySelectorAll(".vector-desktop");
+    const title = document.querySelector(".home-title");
     const vectorsMobile = document.querySelectorAll(".vector-mb");
+    const scrollValue = window.scrollY;
     let initialValue = 0.3;
-
-    const scroll_value = window.scrollY;
-
-    vectorsDesktop.forEach(vector => {
-      if(vector.classList.contains('tree-front')) return;
-      vector.style.bottom = scroll_value * initialValue + "px";
+    
+    vectorsDesktop.forEach((vector) => {
+      if (vector.classList.contains("tree-front")) return;
+      // title.style.paddingBottom =  400 + "px";
+      vector.style.bottom = scrollValue * initialValue + "px";
       initialValue -= 0.09;
     });
 
-    vectorsMobile.forEach(vector => {
-      if(vector.classList.contains('tree-front')) return;
-      vector.style.bottom = scroll_value * initialValue + "px";
-      initialValue -= 0.1;
+    vectorsMobile.forEach((vector) => {
+      if (vector.classList.contains("tree-front")) return;
+      vector.style.bottom = scrollValue * initialValue + "px";
+      initialValue -= 0.09;
     });
+  }
 
+  function teste() {
+    const title = document.querySelector(".home-title");
+    window.scrollY > 80
+      ? (title.style.color = "red")
+      : (title.style.color = "#f5f5f5");
+  }
 
-    // sun.style.bottom = scroll_value * 0.3 + "px";
-    // mtnBack2.style.bottom = scroll_value * 0.25 + "px";
-    // mtnBack.style.bottom = scroll_value * 0.15 + "px";
-    // mtnFront.style.bottom = scroll_value * 0.1 + "px";
-  });
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setParallax();
+    });
+    return () => window.removeEventListener("scroll", setParallax);
+  }, []);
 
   return (
     <Container>
       <div className="title-div">
-        <Title>Mountains</Title>
+        <Title className="home-title">Mountains</Title>
+        <Button>Discover</Button>
       </div>
 
       <div className="container-desktop">
