@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
-  background: rgb(255,249,182);
-  background: linear-gradient(0deg, rgba(255,249,182,1) 0%, rgba(224,153,37,1) 100%);
+  background: radial-gradient(50% 50% at 50% 50%, #FF9A29 0%, #FC5C52 100%);
 
   img {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     position: absolute;
+    bottom: 0;
   }
 
   .title-div {
@@ -19,6 +19,19 @@ export const Container = styled.div`
     align-items: center;
     position: absolute;
     margin-top: 10rem;
+  }
+
+  .vector-mb {
+    display: none;
+  }
+
+  @media (min-width: 300px) and (max-width: 999px) and (orientation: portrait) {
+    .vector-desktop {
+      display: none;
+    }
+    .vector-mb {
+      display: initial;
+    }
   }
 `;
 

@@ -4,7 +4,7 @@ import { images } from "../Images/Images";
 export default function About() {
   return (
     <Container>
-      <img className="vector" src={images.lake} alt="vector" />
+      {/* <img className="vector" src={images.lake} alt="vector" /> */}
       <div className="div-logo">
         <Logo src={images.logo} alt="vector" />
       </div>

@@ -4,7 +4,7 @@ import { setFlexbox } from "../../helpers/Mixins";
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: #0e0e0e;
+  background-color: #090210;
   position: relative;
 
   .vector {
@@ -14,11 +14,9 @@ export const Container = styled.div`
   .div-logo {
     ${setFlexbox('center', 'center', 'row')}
     width: 100%;
-    margin-top: -5rem;
   }
 `;
 
 export const Logo = styled.img`
   margin: 0 auto;
-  margin-top: 5rem;
 `;
