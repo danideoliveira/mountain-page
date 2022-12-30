@@ -3,39 +3,12 @@ import { Container, Title, Button } from "./Home.styled";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  function setParallax() {
-    const vectorsDesktop = document.querySelectorAll(".vector-desktop");
-    const title = document.querySelector(".home-title");
-    const vectorsMobile = document.querySelectorAll(".vector-mb");
-    const scrollValue = window.scrollY;
-    let initialValue = 0.3;
-    
-    vectorsDesktop.forEach((vector) => {
-      if (vector.classList.contains("tree-front")) return;
-      // title.style.paddingBottom =  400 + "px";
-      vector.style.bottom = scrollValue * initialValue + "px";
-      initialValue -= 0.09;
-    });
-
-    vectorsMobile.forEach((vector) => {
-      if (vector.classList.contains("tree-front")) return;
-      vector.style.bottom = scrollValue * initialValue + "px";
-      initialValue -= 0.09;
-    });
-  }
-
-  function teste() {
-    const title = document.querySelector(".home-title");
-    window.scrollY > 80
-      ? (title.style.color = "red")
-      : (title.style.color = "#f5f5f5");
-  }
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setParallax();
-    });
-    return () => window.removeEventListener("scroll", setParallax);
+    window.addEventListener("scroll", () => setScrollY(window.scrollY));
+    return () =>
+      window.removeEventListener("scroll", () => setScrollY(window.scrollY));
   }, []);
 
   return (
@@ -50,21 +23,25 @@ export default function Home() {
           src={images.sun}
           className="sun vector vector-desktop"
           alt="vector"
+          style={{ bottom: scrollY < 661 ? scrollY * 0.25 : 0 }}
         />
         <img
           src={images.mtnBack2}
           className="mtn-back-2 vector vector-desktop"
           alt="vector"
+          style={{ bottom: scrollY < 661 ? scrollY * 0.15 : 0 }}
         />
         <img
           src={images.mtnBack}
           className="mtn-back vector vector-desktop"
           alt="vector"
+          style={{ bottom: scrollY < 661 ? scrollY * -0.15 : 0 }}
         />
         <img
           src={images.mtnFront}
           className="mtn-front vector vector-desktop"
           alt="vector"
+          style={{ bottom: scrollY < 661 ? scrollY * 0.1 : 0 }}
         />
         <img
           src={images.treeFront}
@@ -73,31 +50,33 @@ export default function Home() {
         />
       </div>
 
-      <img
-        src={images.sunMobile}
-        className="sun vector vector-mb"
-        alt="vector"
-      />
-      <img
-        src={images.mtnBack2Mobile}
-        className="mtn-back-2 vector vector-mb"
-        alt="vector"
-      />
-      <img
-        src={images.mtnBackMobile}
-        className="mtn-back vector vector-mb"
-        alt="vector"
-      />
-      <img
-        src={images.mtnFrontMobile}
-        className="mtn-front vector vector-mb"
-        alt="vector"
-      />
-      <img
-        src={images.treeFrontMobile}
-        className="tree-front vector vector-mb"
-        alt="vector"
-      />
+      <div className="container-mobile">
+        <img
+          src={images.sunMobile}
+          className="sun vector vector-mb"
+          alt="vector"
+        />
+        <img
+          src={images.mtnBack2Mobile}
+          className="mtn-back-2 vector vector-mb"
+          alt="vector"
+        />
+        <img
+          src={images.mtnBackMobile}
+          className="mtn-back vector vector-mb"
+          alt="vector"
+        />
+        <img
+          src={images.mtnFrontMobile}
+          className="mtn-front vector vector-mb"
+          alt="vector"
+        />
+        <img
+          src={images.treeFrontMobile}
+          className="tree-front vector vector-mb"
+          alt="vector"
+        />
+      </div>
     </Container>
   );
 }
