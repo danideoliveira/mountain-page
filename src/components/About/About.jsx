@@ -11,7 +11,7 @@ export default function About() {
   ];
   return (
     <Container>
-      <div className="div-logo">
+      <div id="about" className="div-logo">
         <Fade cascade direction="up">
           <Logo src={images.logo} alt="vector" />
           <Text>
@@ -25,11 +25,9 @@ export default function About() {
       </div>
 
       <div className="card-container">
-        <Fade cascade damping={0.05} direction="up">
-          {cardContent.map((card) => (
-            <Card img={card.img} key={card.img} />
-          ))}
-        </Fade>
+        {cardContent.map((card) => (
+          <Card img={card.img} key={card.img} />
+        ))}
       </div>
     </Container>
   );

@@ -18,6 +18,7 @@ export const Container = styled(motion.div)`
     width: 100%;
     height: 100%;
     margin-bottom: 15rem;
+    padding-top: 2rem;
 
     div {
       ${setFlexbox("center", "center", "column")}

@@ -1,6 +1,7 @@
 import styled, { css, keyframes } from "styled-components";
 import { motion } from "framer-motion";
 import { colors } from "../../helpers/Colors";
+import { setFlexbox } from "../../helpers/Mixins";
 
 export const Container = styled.div`
   width: 100%;
@@ -60,7 +61,8 @@ export const Title = styled.h1`
   transition: 0.5s ease-in;
 `;
 
-export const Button = styled(motion.button)`
+export const Button = styled(motion.a)`
+  ${setFlexbox("center", "center", "row")};
   width: 15%;
   height: 6rem;
   color: ${colors.color1};
@@ -71,6 +73,7 @@ export const Button = styled(motion.button)`
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;
+  text-align: center;
 
   &:hover {
     background-color: ${colors.color1};
