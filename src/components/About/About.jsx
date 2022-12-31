@@ -1,4 +1,4 @@
-import { Container, Logo, Text } from "./About.styled";
+import { Container, Logo, Text, Title } from "./About.styled";
 import { images } from "../Images/Images";
 import { Fade } from "react-awesome-reveal";
 import Card from "../Card/Card";
@@ -6,14 +6,15 @@ import Card from "../Card/Card";
 export default function About() {
   const cardContent = [
     { img: images.cardImg1 },
-    { img: images.cardImg1 },
-    { img: images.cardImg1 },
+    { img: images.cardImg2 },
+    { img: images.cardImg3 },
   ];
   return (
     <Container>
       <div id="about" className="div-logo">
         <Fade cascade direction="up">
           <Logo src={images.logo} alt="vector" />
+          <Title>Lorem Ipsum</Title>
           <Text>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam lorem
             eros, luctus eu egestas vitae, hendrerit ut dui. Cras commodo

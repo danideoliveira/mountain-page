@@ -5,6 +5,8 @@ import mtnBack2 from "../../assets/mtn-back-2.png";
 import sun from "../../assets/sun.png";
 import logo from "../../assets/logo.png";
 import cardImg1 from "../../assets/card-img-1.png";
+import cardImg2 from "../../assets/card-img-2.png";
+import cardImg3 from "../../assets/card-img-3.png";
 
 import treeFrontMobile from "../../assets/front-tree-mobile.png";
 import mtnFrontMobile from "../../assets/mtn-front-mobile.png";
@@ -24,5 +26,7 @@ export const images = {
   mtnFront,
   mtnFrontMobile,
   logo,
-  cardImg1
+  cardImg1,
+  cardImg2,
+  cardImg3,
 };

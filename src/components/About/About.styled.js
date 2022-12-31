@@ -36,9 +36,15 @@ export const Logo = styled(motion.img)`
   margin-bottom: 2rem;
 `;
 
+export const Title = styled.h2`
+  font-size: 3.2rem;
+  color: ${colors.color1};
+  margin-bottom: 1rem;
+`;
+
 export const Text = styled.p`
   font-size: 1.8rem;
   color: ${colors.color3};
   text-align: justify;
-  width: 50%;
+  width: 40%;
 `;
