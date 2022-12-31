@@ -3,11 +3,17 @@ import { setFlexbox } from "../../helpers/Mixins";
 import { colors } from "../../helpers/Colors";
 import { motion } from "framer-motion";
 
-export const Container = styled(motion.div)`
+export const Container = styled.div`
+  ${setFlexbox("center", "center", "row")}
   width: 100%;
   background-color: ${colors.color2};
+`;
+
+export const ContainerSecondary = styled(motion.div)`
+  width: 100%;
   position: relative;
   padding: 20rem 0;
+  max-width: 1000px;
 
   .vector {
     top: 0;

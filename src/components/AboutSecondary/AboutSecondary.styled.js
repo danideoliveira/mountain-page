@@ -4,7 +4,7 @@ import { colors } from "../../helpers/Colors";
 import { images } from "../Images/Images";
 
 export const Container = styled.div`
-  ${setFlexbox("center", "center", "column")};
+  ${setFlexbox("center", "center", "row")};
   width: 100%;
   height: 100vh;
   background-image: url(${images.mtnBackground});
@@ -12,7 +12,13 @@ export const Container = styled.div`
   background-size: cover;
   background-attachment: fixed;
   position: relative;
+`;
+
+export const ContainerSecondary = styled.div`
+  ${setFlexbox("center", "center", "column")};
+  width: 100%;
   padding: 20rem 0;
+  max-width: 1000px;
 
   .custom-shape-divider-top-1672519728 {
     position: absolute;
@@ -46,5 +52,5 @@ export const Text = styled.p`
   font-size: 1.8rem;
   color: ${colors.color3};
   text-align: justify;
-  width: 40%;
+  width: 60%;
 `;
