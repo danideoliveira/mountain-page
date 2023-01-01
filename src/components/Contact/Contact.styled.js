@@ -96,9 +96,12 @@ export const Title = styled.h2`
   width: 70%;
   text-align: left;
 
+  @media (min-width: 300px) and (max-width: 999px) {
+    font-size: 5rem;
+  }
+
   @media (min-width: 300px) and (max-width: 600px) {
     width: 100%;
-    font-size: 5rem;
     text-align: center;
   }
 `;
