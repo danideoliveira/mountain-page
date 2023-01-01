@@ -10,11 +10,42 @@ export const Container = styled.footer`
 `;
 
 export const ContainerSecondary = styled.div`
-  ${setFlexbox("space-between", "center", "row")};
+  ${setFlexbox("space-between", "center", "column")};
   width: 100%;
   /* height: 100vh; */
-  padding: 10rem 0;
+  padding: 8rem 0 2rem 0;
   max-width: 1000px;
+
+  a {
+    font-size: 1.4rem;
+    color: ${colors.color3};
+    text-align: justify;
+    width: 70%;
+    margin-bottom: 0.7rem;
+    color: ${colors.color3};
+    transition: 0.3s;
+
+    &:hover {
+      transition: 0.3s;
+      color: ${colors.color1};
+    }
+  }
+
+  .copy-link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .container-icons {
+    ${setFlexbox("center", "center", "row")};
+    width: 40%;
+  }
+
+  .container-footer-links {
+    ${setFlexbox("space-between", "center", "row")};
+    width: 100%;
+    margin-bottom: 5rem;
+  }
 
   .footer-left-div {
     ${setFlexbox("center", "center", "row")};
@@ -22,7 +53,7 @@ export const ContainerSecondary = styled.div`
     height: 100%;
   }
   .footer-right-div {
-    ${setFlexbox("center", "center", "row")};
+    ${setFlexbox("center", "center", "column")};
     width: 40%;
     height: 100%;
   }
@@ -55,8 +86,22 @@ export const Text = styled.p`
   text-align: justify;
   width: 70%;
   margin-bottom: 0.7rem;
+`;
 
-  a {
-    color: ${colors.color3};
+export const Icon = styled.a`
+  ${setFlexbox("center", "center", "row")};
+  cursor: default;
+
+  svg {
+    font-size: 2rem;
+    width: 2.5rem;
+    color: ${colors.color5};
+    transition: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      transition: 0.3s;
+      color: ${colors.color3};
+    }
   }
 `;
