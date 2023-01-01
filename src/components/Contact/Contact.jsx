@@ -12,7 +12,7 @@ export default function Contact() {
           </Text>
         </div>
         <div className="contact-right-div">
-          <form>
+          <form method="POST" action="/">
             <label>Name</label>
             <input type="text" required />
             <label>Email</label>
