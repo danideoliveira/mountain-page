@@ -47,7 +47,7 @@ export const Title = styled.h2`
   margin-bottom: 1.5rem;
   font-weight: 400;
 
-  @media (min-width: 601px) and (max-width: 999px) {
+  @media (min-width: 300px) and (max-width: 999px) {
     font-size: 6.4rem;
   }
 
@@ -55,6 +55,10 @@ export const Title = styled.h2`
     font-size: 5rem;
     width: 90%;
     text-align: center;
+  }
+
+  @media (min-width: 300px) and (max-width: 480px) {
+    margin-top: 7rem;
   }
 `;
 
