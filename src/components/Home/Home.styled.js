@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled from "styled-components";
 import { motion } from "framer-motion";
 import { colors } from "../../helpers/Colors";
 import { setFlexbox } from "../../helpers/Mixins";
@@ -6,7 +6,6 @@ import { setFlexbox } from "../../helpers/Mixins";
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
-  /* background: radial-gradient(50% 50% at 50% 50%, #FF9A29 0%, #FC5C52 100%); */
   overflow: hidden;
 
   .container-desktop {
@@ -27,7 +26,6 @@ export const Container = styled.div`
 
   img {
     width: 100%;
-    /* height: 100%; */
     position: absolute;
     bottom: 0;
     transition: 0.3s all ease;

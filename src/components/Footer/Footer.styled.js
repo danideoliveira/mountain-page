@@ -11,7 +11,6 @@ export const Container = styled.footer`
 export const ContainerSecondary = styled.div`
   ${setFlexbox("space-between", "center", "column")};
   width: 100%;
-  /* height: 100vh; */
   padding: 8rem 0 2rem 0;
   max-width: 1000px;
 
