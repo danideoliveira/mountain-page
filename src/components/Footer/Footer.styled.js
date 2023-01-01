@@ -43,13 +43,13 @@ export const ContainerSecondary = styled.div`
 
   .container-footer-links {
     ${setFlexbox("space-between", "center", "row")};
-    width: 100%;
+    width: 90%;
     margin-bottom: 5rem;
   }
 
   .footer-left-div {
     ${setFlexbox("center", "center", "row")};
-    width: 60%;
+    width: 70%;
     height: 100%;
   }
   .footer-right-div {
@@ -62,7 +62,9 @@ export const ContainerSecondary = styled.div`
   .footer-address,
   .footer-menu {
     width: 35%;
-    ${setFlexbox("center", "center", "column")};
+    height: 8rem;
+    ${setFlexbox("flex-start", "center", "column")};
+    overflow-wrap: anywhere;
   }
 
   .footer-contacts,
@@ -76,7 +78,7 @@ export const Title = styled.h2`
   color: ${colors.color1};
   margin-bottom: 1.5rem;
   font-weight: 400;
-  width: 70%;
+  width: 80%;
   text-align: left;
 `;
 
@@ -84,7 +86,7 @@ export const Text = styled.p`
   font-size: 1.4rem;
   color: ${colors.color3};
   text-align: justify;
-  width: 70%;
+  width: 80%;
   margin-bottom: 0.7rem;
 `;
 

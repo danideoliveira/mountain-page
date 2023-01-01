@@ -17,6 +17,14 @@ export const Container = styled.div`
     top: 6.5rem;
   }
 
+  .container-mobile {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    top: 10rem;
+  }
+
   img {
     width: 100%;
     /* height: 100%; */
@@ -39,15 +47,37 @@ export const Container = styled.div`
   }
 
   .vector-mb {
-    visibility: hidden;
+    display: none;
+  }
+
+  @media (min-width: 300px) and (max-width: 600px) {
+    .title-div {
+      z-index: 999;
+      padding-bottom: 25rem;
+    }
+
+    .container-mobile {
+      top: 5rem;
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 880px) {
+    & {
+      margin-top: 10rem;
+    }
+    .title-div {
+      padding-bottom: 60rem;
+    }
   }
 
   @media (min-width: 300px) and (max-width: 999px) and (orientation: portrait) {
+    .container-desktop,
     .vector-desktop {
-      visibility: hidden;
+      display: none;
     }
+
     .vector-mb {
-      visibility: visible;
+      display: initial;
     }
   }
 `;
@@ -59,6 +89,11 @@ export const Title = styled.h1`
   font-weight: 400;
   user-select: none;
   transition: 0.5s ease-in;
+
+  @media (min-width: 300px) and (max-width: 999px) {
+    margin: 4rem 0 2rem 0;
+    font-size: 6.4rem;
+  }
 `;
 
 export const Button = styled(motion.a)`
@@ -78,5 +113,9 @@ export const Button = styled(motion.a)`
   &:hover {
     background-color: ${colors.color1};
     color: ${colors.color2};
+  }
+
+  @media (min-width: 300px) and (max-width: 999px) {
+    width: 40%;
   }
 `;

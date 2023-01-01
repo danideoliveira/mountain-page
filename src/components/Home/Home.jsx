@@ -15,7 +15,11 @@ export default function Home() {
     <Container>
       <div className="title-div">
         <Title className="home-title">Mountains</Title>
-        <Button href="#about" whileHover={{ scale: 1.1 }} whileTap={{ scale: 1 }}>
+        <Button
+          href="#about"
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 1 }}
+        >
           Discover
         </Button>
       </div>
@@ -57,21 +61,25 @@ export default function Home() {
           src={images.sunMobile}
           className="sun vector vector-mb"
           alt="vector"
+          style={{ bottom: scrollY < 661 ? scrollY * 0.25 : 0 }}
         />
         <img
           src={images.mtnBack2Mobile}
           className="mtn-back-2 vector vector-mb"
           alt="vector"
+          style={{ bottom: scrollY < 661 ? scrollY * 0.15 : 0 }}
         />
         <img
           src={images.mtnBackMobile}
           className="mtn-back vector vector-mb"
           alt="vector"
+          style={{ bottom: scrollY < 661 ? scrollY * -0.15 : 0 }}
         />
         <img
           src={images.mtnFrontMobile}
           className="mtn-front vector vector-mb"
           alt="vector"
+          style={{ bottom: scrollY < 661 ? scrollY * 0.1 : 0 }}
         />
         <img
           src={images.treeFrontMobile}
