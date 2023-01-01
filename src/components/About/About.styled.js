@@ -36,6 +36,12 @@ export const ContainerSecondary = styled(motion.div)`
     margin: 0 auto;
     width: 90%;
   }
+
+  @media (min-width: 300px) and (max-width: 600px) {
+    .card-container {
+      flex-direction: column;
+    }
+  }
 `;
 
 export const Logo = styled(motion.img)`
@@ -53,4 +59,8 @@ export const Text = styled.p`
   color: ${colors.color3};
   text-align: justify;
   width: 40%;
+
+  @media (min-width: 300px) and (max-width: 999px) {
+    width: 60%;
+  }
 `;

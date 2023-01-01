@@ -46,11 +46,17 @@ export const Title = styled.h2`
   color: ${colors.color1};
   margin-bottom: 1.5rem;
   font-weight: 400;
+
+  @media (min-width: 300px) and (max-width: 600px) {
+    font-size: 5rem;
+    width: 90%;
+    text-align: center;
+  }
 `;
 
 export const Text = styled.p`
   font-size: 1.8rem;
   color: ${colors.color3};
   text-align: justify;
-  width: 60%;
+  width: 70%;
 `;

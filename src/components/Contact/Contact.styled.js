@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { setFlexbox } from "../../helpers/Mixins";
 import { colors } from "../../helpers/Colors";
-import { images } from "../Images/Images";
 
 export const Container = styled.div`
   width: 100%;
@@ -12,7 +11,6 @@ export const Container = styled.div`
 export const ContainerSecondary = styled.div`
   ${setFlexbox("center", "center", "row")};
   width: 100%;
-  /* height: 100vh; */
   padding: 10rem 0;
   max-width: 1000px;
 
@@ -65,6 +63,29 @@ export const ContainerSecondary = styled.div`
       margin-top: 1.5rem;
     }
   }
+
+  @media (min-width: 300px) and (max-width: 600px) {
+    flex-direction: column;
+    width: 90%;
+
+    form {
+      width: 70%;
+
+      button {
+        width: 60%;
+        margin-top: 2rem;
+      }
+    }
+
+    .contact-left-div,
+    .contact-right-div {
+      width: 100%;
+    }
+
+    .contact-right-div {
+      margin-top: 3rem;
+    }
+  }
 `;
 
 export const Title = styled.h2`
@@ -74,6 +95,12 @@ export const Title = styled.h2`
   font-weight: 400;
   width: 70%;
   text-align: left;
+
+  @media (min-width: 300px) and (max-width: 600px) {
+    width: 100%;
+    font-size: 5rem;
+    text-align: center;
+  }
 `;
 
 export const Text = styled.p`

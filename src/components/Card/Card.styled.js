@@ -54,4 +54,17 @@ export const CardItem = styled.div`
     object-fit: cover;
     border-radius: 10px;
   }
+
+  @media (min-width: 300px) and (max-width: 600px) {
+    & {
+      flex-direction: column;
+      margin: 1rem 0;
+      width: 25rem;
+      height: 35rem;
+
+      &:hover {
+        transform: none;
+      }
+    }
+  }
 `;
