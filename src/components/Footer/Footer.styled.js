@@ -14,19 +14,23 @@ export const ContainerSecondary = styled.div`
   width: 100%;
   /* height: 100vh; */
   padding: 10rem 0;
-  max-width: 1280px;
+  max-width: 1000px;
 
-  .footer-left-div,
+  .footer-left-div {
+    ${setFlexbox("center", "center", "row")};
+    width: 60%;
+    height: 100%;
+  }
   .footer-right-div {
     ${setFlexbox("center", "center", "row")};
-    width: 50%;
+    width: 40%;
     height: 100%;
   }
 
   .footer-contacts,
   .footer-address,
   .footer-menu {
-    width: 40%;
+    width: 35%;
     ${setFlexbox("center", "center", "column")};
   }
 
@@ -50,7 +54,7 @@ export const Text = styled.p`
   color: ${colors.color3};
   text-align: justify;
   width: 70%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.7rem;
 
   a {
     color: ${colors.color3};
