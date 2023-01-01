@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { setFlexbox } from "../../helpers/Mixins";
 import { colors } from "../../helpers/Colors";
-import { images } from "../Images/Images";
 
 export const Container = styled.footer`
   width: 100%;
@@ -71,6 +70,33 @@ export const ContainerSecondary = styled.div`
   .footer-address {
     border-right: 1px solid ${colors.color5};
   }
+
+  @media (min-width: 300px) and (max-width: 600px) {
+    .container-footer-links,
+    .footer-left-div {
+      flex-direction: column;
+    }
+
+    .container-icons {
+      width: 100%;
+    }
+
+    .footer-left-div {
+      width: 90%;
+    }
+
+    .footer-right-div {
+      margin-top: 3rem;
+    }
+
+    .footer-contacts,
+    .footer-address,
+    .footer-menu {
+      width: 100%;
+      margin-bottom: 3rem;
+      border-right: 0;
+    }
+  }
 `;
 
 export const Title = styled.h2`
@@ -80,6 +106,10 @@ export const Title = styled.h2`
   font-weight: 400;
   width: 80%;
   text-align: left;
+
+  @media (min-width: 300px) and (max-width: 600px) {
+    text-align: center;
+  }
 `;
 
 export const Text = styled.p`
@@ -88,6 +118,10 @@ export const Text = styled.p`
   text-align: justify;
   width: 80%;
   margin-bottom: 0.7rem;
+
+  @media (min-width: 300px) and (max-width: 600px) {
+    text-align: center;
+  }
 `;
 
 export const Icon = styled.a`
