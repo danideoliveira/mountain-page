@@ -54,6 +54,10 @@ export const ContainerSecondary = styled.div`
     ${setFlexbox("center", "center", "column")};
     width: 40%;
     height: 100%;
+
+    img {
+      width: 250px;
+    }
   }
 
   .footer-contacts,

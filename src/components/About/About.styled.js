@@ -45,6 +45,7 @@ export const ContainerSecondary = styled(motion.div)`
 `;
 
 export const Logo = styled(motion.img)`
+  width: 250px;
   margin-bottom: 2rem;
 `;
 
