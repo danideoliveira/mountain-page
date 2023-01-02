@@ -59,9 +59,5 @@ export const Text = styled.p`
   font-size: 1.8rem;
   color: ${colors.color3};
   text-align: justify;
-  width: 40%;
-
-  @media (min-width: 300px) and (max-width: 999px) {
-    width: 60%;
-  }
+  width: 60%;
 `;
