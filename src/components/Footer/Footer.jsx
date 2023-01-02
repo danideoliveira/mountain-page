@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="footer-left-div">
             <div className="footer-contacts">
               <Title>Contacts</Title>
-              <Text>(21)99999-9999</Text>
+              <Text>(21) 99999-9999</Text>
               <Text>youremail@email.com</Text>
             </div>
             <div className="footer-address">
@@ -49,7 +49,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <a href="#" className="copy-link">
+        <a target="_blank" href="https://www.linkedin.com/in/devdani/" className="copy-link">
           Daniel de Oliveira Santos &copy; 2022
         </a>
       </ContainerSecondary>
