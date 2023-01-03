@@ -5,7 +5,7 @@ import { setFlexbox } from "../../helpers/Mixins";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 95vh;
   overflow: hidden;
   background: radial-gradient(100% 50% at 50% 50%, #FF9A29 0%, #FC5C52 100%);
 
