@@ -7,11 +7,12 @@ export const Container = styled.div`
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  background: radial-gradient(100% 50% at 50% 50%, #FF9A29 0%, #FC5C52 100%);
 
   .container-desktop {
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
     overflow: hidden;
     top: 6.5rem;
   }
@@ -19,7 +20,7 @@ export const Container = styled.div`
   .container-mobile {
     width: 100%;
     height: 100%;
-    position: relative;
+    position: absolute;
     overflow: hidden;
     top: 10rem;
   }
@@ -35,37 +36,17 @@ export const Container = styled.div`
 
   .title-div {
     width: 100%;
-    height: 100%;
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    padding-bottom: 20rem;
+    /* padding-top: 10rem; */
     flex-direction: column;
+    z-index: 999;
   }
 
   .vector-mb {
     display: none;
-  }
-
-  @media (min-width: 300px) and (max-width: 600px) {
-    .title-div {
-      z-index: 999;
-      padding-bottom: 25rem;
-    }
-
-    .container-mobile {
-      top: 5rem;
-    }
-  }
-
-  @media (min-width: 601px) and (max-width: 880px) {
-    & {
-      margin-top: 10rem;
-    }
-    .title-div {
-      padding-bottom: 60rem;
-    }
   }
 
   @media (min-width: 300px) and (max-width: 999px) and (orientation: portrait) {
