@@ -40,7 +40,6 @@ export const Container = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding-top: 10rem; */
     flex-direction: column;
     z-index: 999;
   }
