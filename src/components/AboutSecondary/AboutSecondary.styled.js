@@ -6,7 +6,6 @@ import { images } from "../Images/Images";
 export const Container = styled.div`
   ${setFlexbox("center", "center", "row")};
   width: 100%;
-  height: 100vh;
   background-image: url(${images.mtnBackground});
   background-repeat: no-repeat;
   background-size: cover;
